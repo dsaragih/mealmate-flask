@@ -1,7 +1,6 @@
-from flask import Blueprint, request, current_app, redirect, url_for
+from flask import Blueprint, request, current_app
 from flask.templating import render_template
 from flask_login import logout_user, current_user
-from .forms import Form
 #from data_analysis import recommendation
 
 lines = []
@@ -39,7 +38,6 @@ def home():
   'Simple Fried Egg ',
   'www.epicurious.com/recipes/member/views/simple-fried-egg-50025786',
   '["egg salt"]']])
-        # print(calories, health, ingredient_choice)
 
     with open('website/ingredients.txt', 'r') as f:
         lines = f.readlines()
