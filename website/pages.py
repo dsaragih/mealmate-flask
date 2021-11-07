@@ -10,9 +10,10 @@ pages = Blueprint("pages", __name__)
 @pages.route('/', methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        calories = request.form.get('calories')
-        health = request.form.get('health')
+        calories = int(request.form.get('calories'))
+        health = int(request.form.get('health'))
         ingredient_choice = request.form.getlist('ingredient_choice')
+
         recommendations = recommendation(ingredient_choice, calories, health)
         return render_template("recommendation.html", user=current_user, data=recommendations)
 

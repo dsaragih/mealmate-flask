@@ -21,7 +21,7 @@ from sklearn.metrics.pairwise import linear_kernel, cosine_similarity
 
 def recommendation(ingredient_list, calorie, health):
     # processed dataset
-    df = pd.read_csv("data/recipe_data_lite_reduced_calories.csv")
+    df = pd.read_csv("recipe_data_lite_reduced_calories.csv")
     # Dae FIX = We need at least 2 ingredients to make a recommendation
     if len(ingredient_list) < 2:
         return "Please select at least 2 ingredients"
