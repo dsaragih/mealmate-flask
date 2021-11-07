@@ -8,12 +8,12 @@ from os import path
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
-config = dotenv_values(".env")
+#config = dotenv_values(".env")
 
 
 def create_app():
     app = Flask(__name__)
-    app.config["SECRET_KEY"] = config["SECRET_KEY"]
+    app.config["SECRET_KEY"] = "spdfspdfjiwekd"
     app.config["SQLALCHEMY_DATABASE_URI"] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
