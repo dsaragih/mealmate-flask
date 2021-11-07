@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Home page{% endblock %}
+{% block content %}
+
+<div class="table-responsive">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Dish</th>
+            <th scope="col">Website</th>
+            <th scope="col">Ingredients</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for i in range(data|length)%} 
+          <tr>
+            <td>
+                {{i+1}}
+            </td>
+            {% for point in data[1:-1][i] %}
+            <td>
+                {{point}}
+            </td>
+            {%endfor%}
+            <td>
+                {{data[-1]|join(", ")}}
+            </td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}
