@@ -1,2 +1,3 @@
 # mealmate-flask
-![](/website/static/icon.jpg)
+(MealMate)[https://mealmate-flask.herokuapp.com/]
+![MealMate Logo](/website/static/icon.jpg)
